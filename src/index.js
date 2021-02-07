@@ -2,9 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import Router from './Router/routes';
+import { ThemeProvider } from 'styled-components';
+import Theme from './asset/theme/theme';
+import GlobalStyle from './asset/GlobalStyle';
+
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle/>
+      <Router />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
